@@ -4,7 +4,6 @@ import org.example.CapitalizeClient;
 import org.example.CapitalizeServer;
 import org.junit.jupiter.api.*;
 
-@DisplayName("CapitalizeClient")
 public class CapitalizeClientTests {
     @Test
     void SelectHost_SERVERIP_When_WhiteSpace() {

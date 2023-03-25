@@ -7,7 +7,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Disabled;
 
-@DisplayName("CapitalizeServer")
 public class CapitalizeServerTests {
     @BeforeAll
     static void setup(){
