@@ -12,7 +12,7 @@ public class CapitalizeClient {
             = Executors.newSingleThreadExecutor();
 
     public static void main(String[] args) throws Exception {
-        try (var socket = new Socket("localhost", 59898)) {
+        try (var socket = new Socket("194.87.186.59", 59898)) {
             System.out.println("Enter lines of text then Ctrl+D or Ctrl+C to quit");
             System.out.println("Input your name");
             var scanner = new Scanner(System.in);
