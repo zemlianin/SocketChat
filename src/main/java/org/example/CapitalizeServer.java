@@ -22,6 +22,9 @@ public class CapitalizeServer {
         }
     }
 
+    static public String strToUp(String s) {
+        return s.toUpperCase();
+    }
     private static class Capitalizer implements Runnable {
         static ConcurrentHashMap<String, Socket> users = new ConcurrentHashMap<>();
         static CopyOnWriteArrayList<PrintWriter> chats = new CopyOnWriteArrayList<>();
@@ -43,7 +46,7 @@ public class CapitalizeServer {
                     if (flag) {
                         String msg = in.nextLine();
                         for (var stream : chats) {
-                            stream.println(name + " : " + msg.toUpperCase());
+                            stream.println(name + " : " + CapitalizeServer.strToUp(msg));
                         }
                     } else {
                         name = in.nextLine();
@@ -52,7 +55,7 @@ public class CapitalizeServer {
                             chats.add(out);
                             flag = true;
                             out.println("success");
-                        } else{
+                        } else {
                             out.println("input other name");
                         }
                     }
